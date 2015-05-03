@@ -1,0 +1,23 @@
+{
+  "name": "food",
+  "version": "0.0.0",
+  "authors": [
+    "Henry Ventura <hvent90@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "pusher": "~2.2.4",
+    "jquery": "~2.1.4",
+    "handlebars": "~3.0.3"
+  },
+  "install": {
+    "path": "public/vendor/js"
+  }
+}
