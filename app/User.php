@@ -120,4 +120,10 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         return $this->belongsToMany('App\Food')->withTimestamps();
     }
 
+    public function business()
+    {
+        return $this->hasMany('App\Business');
+    }
+
+
 }

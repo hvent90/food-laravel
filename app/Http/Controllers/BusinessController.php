@@ -1,5 +1,7 @@
 <?php namespace App\Http\Controllers;
 
+use App, Input, Log, Response;
+use App\Business;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -9,7 +11,19 @@ class BusinessController extends Controller {
 
 	public function submit(Request $request)
 	{
-		return 'Woo!';
+		if (Input::json()->get('happy')) {
+			$business =  Business::create(['happy' => 1]);
+		} else {
+			$business =  Business::create([
+				'blood' => Input::json()->get('blood'),
+				'pain' => Input::json()->get('pain'),
+				'consistency' => Input::json()->get('consistency')
+			]);
+		}
+
+		$request->get('user')->business()->save($business);
+
+		return 'good job bro';
 	}
 
 	public function Test(Request $request)

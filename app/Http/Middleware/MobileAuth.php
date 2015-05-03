@@ -27,7 +27,6 @@ class MobileAuth {
 	 */
 	public function handle($request, Closure $next)
 	{
-		App::make('Pusher')->trigger('apiChannel', 'apiCall', ['custom' => 'test']);
 		if ($request->isMethod('post')) {
 			$authToken = Input::json()->get('auth_token');
 		} else {

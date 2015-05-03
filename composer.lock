@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "33acc3cc6c5b42b8caaec0da0e74739a",
+    "hash": "00e9d158622ed1bc984346f155e94180",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -567,6 +567,53 @@
                 "stream"
             ],
             "time": "2014-10-12 19:18:40"
+        },
+        {
+            "name": "hvent90/api-inspector",
+            "version": "1.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hvent90/api-inspector.git",
+                "reference": "a7ae9c1d7ac117b85c7ff50417aa0c8be66d7065"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hvent90/api-inspector/zipball/a7ae9c1d7ac117b85c7ff50417aa0c8be66d7065",
+                "reference": "a7ae9c1d7ac117b85c7ff50417aa0c8be66d7065",
+                "shasum": ""
+            },
+            "require": {
+                "pusher/pusher-php-server": "~2.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Hvent90\\ApiInspector\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Henry Ventura",
+                    "email": "hvent90@gmail.com"
+                }
+            ],
+            "description": "Streams API requests",
+            "keywords": [
+                "5",
+                "api",
+                "debug",
+                "http",
+                "inspect",
+                "inspection",
+                "inspector",
+                "laravel",
+                "request"
+            ],
+            "time": "2015-04-29 17:47:43"
         },
         {
             "name": "ircmaxell/password-compat",
