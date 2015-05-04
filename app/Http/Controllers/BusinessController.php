@@ -5,6 +5,7 @@ use App\Business;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class BusinessController extends Controller {
@@ -26,20 +27,11 @@ class BusinessController extends Controller {
 		return 'good job bro';
 	}
 
-	public function Test(Request $request)
+	public function index(Request $request)
 	{
-		$var = 'test';
-		return $var;
-	}
+		$oneWeekAgo = Carbon::now()->subWeek();
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-	public function index()
-	{
-		//
+		return $request->get('user')->business()->where('created_at', '>', $oneWeekAgo)->orderBy('id', 'asc')->get();
 	}
 
 	/**

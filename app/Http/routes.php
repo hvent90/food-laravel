@@ -30,6 +30,7 @@ Route::group(['middleware' => []], function()
 
 	    Route::post('/business', 'BusinessController@submit');
 	    Route::get('/business', 'BusinessController@test');
+	    Route::get('/business/explore', 'BusinessController@index');
 	});
 
 	/**
