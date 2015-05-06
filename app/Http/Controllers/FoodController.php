@@ -24,4 +24,9 @@ class FoodController extends Controller {
 
 		return Food::orderBy('name', 'asc')->get();
 	}
+
+	public function paginationTest()
+	{
+		return Food::paginate(5);
+	}
 }

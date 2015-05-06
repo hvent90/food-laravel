@@ -17,6 +17,8 @@ Route::group(['middleware' => []], function()
 
 	Route::get('home', 'HomeController@index');
 
+	Route::get('/food/paginate', 'FoodController@paginationTest');
+
 	// Route::get('/auth/facebook', 'SocialController@redirectToProvider');
 	// Route::get('/facebook/callback', 'SocialController@handleProviderCallback');
 

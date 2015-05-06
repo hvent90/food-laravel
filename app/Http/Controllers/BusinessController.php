@@ -18,6 +18,7 @@ class BusinessController extends Controller {
 			$business =  Business::create([
 				'blood' => Input::json()->get('blood'),
 				'pain' => Input::json()->get('pain'),
+				'time_cleaning' => Input::json()->get('time_cleaning'),
 				'consistency' => Input::json()->get('consistency')
 			]);
 		}
@@ -31,7 +32,7 @@ class BusinessController extends Controller {
 	{
 		$oneWeekAgo = Carbon::now()->subWeek();
 
-		return $request->get('user')->business()->where('created_at', '>', $oneWeekAgo)->orderBy('id', 'asc')->get();
+		return $request->get('user')->business()->orderBy('id', 'desc')->paginate(20);
 	}
 
 	/**

@@ -24,6 +24,7 @@ class Business extends Model {
 		'happy',
 		'blood',
 		'pain',
+		'time_cleaning',
 		'consistency'
 	];
 
